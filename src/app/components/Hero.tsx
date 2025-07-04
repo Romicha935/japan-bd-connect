@@ -37,15 +37,22 @@ const Hero = () => {
       autoplay:true,
       speeds:800,
       slidesToShow:1,
-      slidesToScroll:1
+      slidesToScroll:1,
+       autoplaySpeed: 2000    
   }
   return (
-    <section>
+    <section className='w-full pt-2 h-[80vh] relative'>
       <Slider {...settings}>
-        {slides.map((slide,index)=> (
-          <div key={index}>
-            <Image src={slide.src} alt={slide.title} className='' layout='fill' objectFit='cover'/>
+        {slides.map((slide,index)=> ( 
+          <div key={index} className='relative overflow-hidden w-full h-[80vh]'>
+            <Image src={slide.src} alt={slide.title} className='brightness-[0.6]' layout='fill' objectFit='cover' priority/>
+            <div className='absolute inset-0 flex flex-col items-center justify-center text-center px-6'>
+              <h1 className='text-white text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg'>{slide.title}</h1>
+              <p className='text-gray-200 text-lg max-w-2xl drop-shadow-md'>{slide.subtext}</p>
+              <button className='bg-blue-600 text-white px-6 py-2 mt-4 hover:bg-white hover:text-blue-600 hover:scale-105 text-2xl shadow-2xl rounded hover:border-2 '>Explore Now</button>
+            </div>
           </div>
+
         ))}
       </Slider>
     </section>
