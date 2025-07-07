@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 
 const Impact = () => {
+     useEffect(()=>{
+        Aos.init({
+          duration:1200,
+    
+        })
+      },[])
   return (
-      <section className='bg-blue-50 py-16 text-center'>
+      <section data-aos='zoom-in' className='bg-blue-50 py-16 text-center'>
         <h2 className='text-3xl font-bold text-blue-600 mb-8'>Our Impact</h2>
         <div className='grid md:grid-cols-4 gap-6 max-w-6xl mx-auto text-blue-800 text-lg font-semibold'>
             <div>

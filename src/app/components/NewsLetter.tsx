@@ -1,9 +1,16 @@
   "use client"
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 
 const NewsLetter = () => {
+   useEffect(()=>{
+      Aos.init({
+        duration:1200,
+  
+      })
+    },[])
   return (
-     <section className='py-16 px-6 bg-blue-50'>
+     <section data-aos='zoom-in' className='py-16 px-6 bg-blue-50'>
         <div className='max-w-xl text-center mx-auto'>
             <h2 className='text-3xl font-bold text-blue-700 mb-4'>Stay Updated</h2>
             <p className='text-gray-600 mb-6'>Subscribe to the latest updates on culture , education , and remote jobs</p>

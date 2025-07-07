@@ -3,7 +3,8 @@ import Banner from './Banner'
 // import Food from './Food'
 // import Flag from './Flag'
 import CultureCategoried from './CultureCategoried'
-import BDPlace from './touristPlace/BDPlace'
+import BDPlace from './BDPlace'
+import JapanPlace from './touristPlace/JapanPlace'
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
         <Food/> */}
         <CultureCategoried/>
         <BDPlace/>
+        <JapanPlace/>
     </main>
   )
 }
