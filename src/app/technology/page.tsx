@@ -7,10 +7,12 @@ import Partnership from './Partnership'
 import Inovation from './Inovation'
 import Opportunitis from './Opportunitis'
 import TechEvents from './TechEvents'
+import PrivateRoute from '../route/PrivateRoute'
 
 const page = () => {
   return (
-    <main>
+   <PrivateRoute>
+     <main>
         <Banner/>
         <FocusAreas/>
         <Collaboration/>
@@ -20,6 +22,7 @@ const page = () => {
         <Opportunitis/>
         <TechEvents/>
     </main>
+   </PrivateRoute>
   )
 }
 

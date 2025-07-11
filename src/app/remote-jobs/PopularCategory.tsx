@@ -1,6 +1,7 @@
 "use client"
+import Aos from "aos";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaLaptopCode, FaPaintBrush, FaChartLine, FaLanguage, FaUserShield, FaCode, FaBullhorn, FaLock } from "react-icons/fa";
 
 const jobCategories = [
@@ -37,6 +38,12 @@ const jobCategories = [
 ];
 
 const PopularJobCategories = () => {
+  useEffect(()=>{
+    Aos.init({
+      duration:1200,
+      once:true
+    })
+  },[])
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
@@ -46,7 +53,7 @@ const PopularJobCategories = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {jobCategories.map((cat, idx) => (
-          <div key={idx} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all text-left">
+          <div data-aos='fade-right' fdata-aos-delay={idx * 100} key={idx} className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all text-left">
             <div className="mb-4">{cat.icon}</div>
             <h3 className="text-xl font-semibold text-blue-600 mb-2">{cat.title}</h3>
             <p className="text-gray-700 text-sm mb-4">{cat.description}</p>

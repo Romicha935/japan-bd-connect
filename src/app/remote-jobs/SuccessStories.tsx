@@ -3,10 +3,10 @@ import React from 'react';
 import Slider from "react-slick";
 import Image from 'next/image';
 
-import shakilImg from '../../../public/Tanveer-Hasan-9.png';
-import fatemaImg from '../../../public/Tanveer-Hasan-9.png';
-import tanvirImg from '../../../public/Tanveer-Hasan-9.png';
-import sadiaImg from '../../../public/Tanveer-Hasan-9.png';
+import shakilImg from '../../../public/gallery/storis3.jpg';
+import fatemaImg from '../../../public/gallery/stories1.jpeg';
+import tanvirImg from '../../../public/gallery/stories4.jpg';
+import sadiaImg from '../../../public/gallery/stories2.jpeg';
 
 const stories = [
   {
@@ -37,70 +37,44 @@ const stories = [
 
 const SuccessStories = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 4000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    autoplaySpeed: 5000,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
   };
 
   return (
-    <section className="bg-blue-50 py-16 px-6">
-      <h2 className="text-3xl font-bold text-blue-700 text-center mb-10">🌟 Success Stories</h2>
-      <div className="max-w-3xl mx-auto">
+<section className="bg-blue-50 py-20 px-6">
+      <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">🌟 Success Stories</h2>
+      <div className="max-w-4xl mx-auto">
         <Slider {...settings}>
           {stories.map((story, index) => (
-            <div key={index}>
-              <div className="bg-white p-6 rounded-xl shadow-md flex flex-col md:flex-row items-center gap-6">
+            <div key={index} className="px-4">
+              <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center">
                 <Image
                   src={story.image}
                   alt={story.name}
-                  className="rounded-lg shadow-md object-cover"
-                  width={160}
-                  height={160}
+                  className="rounded-full h-44 w-44 shadow-md mb-4"
+                  width={120}
+                  height={120}
                 />
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-600">{story.name}</h3>
-                  <p className="text-sm text-gray-500 mb-2">{story.role}</p>
-                  <p className="text-gray-700 text-sm">{story.story}</p>
-                </div>
+                <h3 className="text-xl font-semibold text-blue-600">{story.name}</h3>
+                <p className="text-gray-500 text-sm mb-2">{story.role}</p>
+                <p className="text-gray-700 text-base leading-relaxed">{story.story}</p>
               </div>
             </div>
           ))}
         </Slider>
       </div>
-    </section>
-  )
-}
+    </section>  );
+};
 
-// Custom arrow components
-function SampleNextArrow(props: any) {
-  const { className, onClick } = props;
-  return (
-    <div
-      className={`${className} right-2 z-10`}
-      onClick={onClick}
-    >
-      ➡️
-    </div>
-  );
-}
 
-function SamplePrevArrow(props: any) {
-  const { className, onClick } = props;
-  return (
-    <div
-      className={`${className} left-2 z-10`}
-      onClick={onClick}
-    >
-      ⬅️
-    </div>
-  );
-}
 
 export default SuccessStories;

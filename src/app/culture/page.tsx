@@ -5,10 +5,12 @@ import Banner from './Banner'
 import CultureCategoried from './CultureCategoried'
 import BDPlace from './BDPlace'
 import JapanPlace from './touristPlace/JapanPlace'
+import PrivateRoute from '../route/PrivateRoute'
 
 const page = () => {
   return (
-    <main>
+   <PrivateRoute>
+     <main>
         <Banner/>
         {/* <Flag/>
         <Food/> */}
@@ -16,6 +18,7 @@ const page = () => {
         <BDPlace/>
         <JapanPlace/>
     </main>
+   </PrivateRoute>
   )
 }
 

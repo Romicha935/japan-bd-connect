@@ -4,16 +4,19 @@ import WhyremoteJobs from './WhyremoteJobs'
 import PopularCategory from './PopularCategory'
 import SuccessStories from './SuccessStories'
 import HelpfulResources from './Resources'
+import PrivateRoute from '../route/PrivateRoute'
 
 const page = () => {
   return (
-    <main>
+   <PrivateRoute>
+     <main>
         <Banner/>
         <WhyremoteJobs/>
         <PopularCategory/>
         <SuccessStories/>
-        <HelpfulResources/>
+        {/* <HelpfulResources/> */}
     </main>
+   </PrivateRoute>
   )
 }
 

@@ -1,14 +1,34 @@
  'use client'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import logo from '../../../public/logo.jpg'
+import { usePathname, useRouter } from 'next/navigation'
+import logo from '../../../public/gallery/logo.png'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { AuthContext } from '@/context/AuthProvider'
+import Swal from 'sweetalert2'
 
 export const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext)
+    const router = useRouter()
     const pathname = usePathname()
     const [menuOpen,setMenuOpen] = useState(false)
+
+      const handleLogout = () => {
+        logOut()
+        .then(()=> {
+             Swal.fire({
+                        icon:"success",
+                        title: "Logout Successfull",
+                        showConfirmButton:false,
+                        timer:1500
+                       })
+        })
+        .catch((error)=> {
+            console.error('logout error',error);
+            
+        })
+      }
 
     const isActive = (path:string) => {
     return pathname === path? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700'
@@ -18,7 +38,7 @@ export const Navbar = () => {
        setMenuOpen(!menuOpen)
     }
   return (
-    <nav className='relative flex justify-between items-center py-5 px-10 bg-white shadow-md '>
+    <nav className='fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-5 px-10 bg-white shadow-md '>
         <div className='flex items-center gap-2'>
             <Image src={logo} alt='logo' width={40} height={40}/>
             <h1 className='font-bold text-xl'>Nippon-BD <span className='text-blue-600'>Connect</span></h1>
@@ -32,9 +52,27 @@ export const Navbar = () => {
             <li><Link className={isActive('/contact')} href="/contact">Contact</Link></li>
         </ul>
 
-        <div>
-            <button className='bg-blue-600 text-white px-4 py-1 hover:bg-blue-500 rounded transition'>Login</button>
-        </div>
+       {/* Login / Logout & User Display */}
+<div className="hidden md:flex items-center gap-3">
+  {user ? (
+    <>
+      <span className="text-gray-800 font-semibold">{user.displayName || user.email}</span>
+      <button
+        onClick={handleLogout}
+        className="bg-blue-600 cursor-pointer text-white px-4 py-1 rounded hover:bg-blue-700 transition"
+      >
+        Logout
+      </button>
+    </>
+  ) : (
+    <Link href="/login">
+      <button className="bg-blue-600 cursor-pointer text-white px-4 py-1 rounded hover:bg-blue-500 transition">
+        Login
+      </button>
+    </Link>
+  )}
+</div>
+
         {/* mobile menu icon */}
         <div className='md:hidden '>
             <button onClick={toggleMenu}> <FiMenu className='text-blue-600 text-5xl font-bold cursor-pointer' size={24}/></button>

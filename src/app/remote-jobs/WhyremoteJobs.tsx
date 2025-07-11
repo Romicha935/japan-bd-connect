@@ -1,7 +1,14 @@
 "use client";
-import React from "react";
+import Aos from "aos";
+import React, { useEffect } from "react";
 
 const WhyRemoteJobs = () => {
+   useEffect(()=>{
+      Aos.init({
+        duration:1200,
+        once:true
+      })
+    },[])
   return (
     <section className="py-16 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -9,7 +16,7 @@ const WhyRemoteJobs = () => {
           Why Remote Jobs?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div data-aos='zoom-in' className="grid md:grid-cols-2 gap-8">
           {/* Point 1 */}
           <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
             <h3 className="text-xl font-semibold text-blue-600 mb-2">

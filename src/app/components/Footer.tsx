@@ -1,16 +1,21 @@
- "use client"
+"use client"
 import Link from 'next/link'
 import React from 'react'
 
 export const Footer = () => {
   return (
     <footer className='bg-gray-800 py-10 text-white'>
-      <div className='max-w-7xl mx-auto gap-6 px-6 grid grid-cols-1 md:grid-cols-4 '>
-        <div className=''>
-          <h3 className='text-xl font-semibold mb-3'>Nippomn-BD Connect</h3>
-          <p className='text-sm'>Bridging culture, technology, education, and careers between Bangladesh and Japan.</p>
+      <div className='max-w-7xl mx-auto px-6 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        {/* Logo & Description */}
+        <div className='text-center md:text-left'>
+          <h3 className='text-xl font-semibold mb-3'>Nippon-BD Connect</h3>
+          <p className='text-sm'>
+            Bridging culture, technology, education, and careers between Bangladesh and Japan.
+          </p>
         </div>
-        <div>
+
+        {/* Quick Links */}
+        <div className='text-center md:text-left'>
           <h4 className='font-semibold mb-2'>Quick Links</h4>
           <ul className='text-sm space-y-2'>
             <li><Link href='/' className='hover:underline'>Home</Link></li>
@@ -20,23 +25,36 @@ export const Footer = () => {
             <li><Link href='/remote-jobs' className='hover:underline'>Remote Jobs</Link></li>
           </ul>
         </div>
-        <div>
+
+        {/* Resources */}
+        <div className='text-center md:text-left'>
           <h4 className='font-semibold mb-2'>Resources</h4>
           <ul className='text-sm space-y-2'>
             <li><Link href='/faq' className='hover:underline'>FAQ</Link></li>
             <li><Link href='/contact' className='hover:underline'>Contact</Link></li>
             <li><Link href='/blog' className='hover:underline'>Blog</Link></li>
-           
           </ul>
         </div>
-        <div>
-          <h4 className='font-semibold mb-2'>Fllow Us</h4>
-          <ul className='text-sm space-y-2 cursor-pointer'>
-            <li><a href='https://web.facebook.com/romicha.parvin.2024' target='_blank' rel='noopener noreferrer' className='hover:underline hover:cursor-pointer'>Facebook</a></li>
-            <li ><a href='https://www.linkedin.com/in/romicha-parvin-402a16352/' target='_blank' rel='noopener noreferrer' className='hover:underline'>LinkedIn</a></li>
-            <li><a href='https://github.com/Romicha935' target='_blank' rel='noopener noreferrer' className='hover:underline cur'>Github</a></li>
-           
-           
+
+        {/* Follow Us */}
+        <div className='text-center md:text-left'>
+          <h4 className='font-semibold mb-2'>Follow Us</h4>
+          <ul className='text-sm space-y-2'>
+            <li>
+              <a href='https://web.facebook.com/romicha.parvin.2024' target='_blank' rel='noopener noreferrer' className='hover:underline'>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href='https://www.linkedin.com/in/romicha-parvin-402a16352/' target='_blank' rel='noopener noreferrer' className='hover:underline'>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/Romicha935' target='_blank' rel='noopener noreferrer' className='hover:underline'>
+                Github
+              </a>
+            </li>
           </ul>
         </div>
       </div>

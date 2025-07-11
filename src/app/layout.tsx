@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Footer } from "./components/Footer";
 import 'aos/dist/aos.css';
+import AuthProvider from "@/context/AuthProvider";
 
 
 
@@ -34,9 +35,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+       
+        <AuthProvider>
+           <Navbar/>
+            {children}
+             <Footer/>
+        </AuthProvider>
+     
+       
       </body>
     </html>
   );
