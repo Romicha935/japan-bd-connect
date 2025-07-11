@@ -9,7 +9,7 @@ const MextScholarshipPage = () => {
       <p className="text-gray-700 mb-6">
         The MEXT (Monbukagakusho) Scholarship is a prestigious program by the Japanese government 
         that provides full financial support to international students, including those from Bangladesh, 
-        who wish to pursue undergraduate, master's, or doctoral degrees in Japan.
+        who wish to pursue undergraduate, masters, or doctoral degrees in Japan.
       </p>
 
       <h2 className="text-2xl font-semibold text-blue-600 mb-2">📌 Types of MEXT Scholarships</h2>

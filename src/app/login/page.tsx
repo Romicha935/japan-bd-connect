@@ -52,7 +52,7 @@ const Login = () => {
         });
         router.push('/');
       })
-      .catch((error: any) => {
+      .catch((error: Error) => {
         Swal.fire({
           icon: "error",
           title: "Google Login Failed",
