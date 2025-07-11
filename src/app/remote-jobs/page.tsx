@@ -3,7 +3,7 @@ import Banner from './Banner'
 import WhyremoteJobs from './WhyremoteJobs'
 import PopularCategory from './PopularCategory'
 import SuccessStories from './SuccessStories'
-import HelpfulResources from './Resources'
+
 import PrivateRoute from '../route/PrivateRoute'
 
 const page = () => {
