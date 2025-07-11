@@ -1,22 +1,22 @@
-"use client"
-import React from 'react'
-import BDTourDetails from './BDTourDetails'
+// "use client"
+// import React from 'react'
+// import BDTourDetails from './BDTourDetails'
 
 
-    type Props = {
-  params: {
-    slug: string
-  }
-}
+//     type Props = {
+//   params: {
+//     slug: string
+//   }
+// }
 
-const page = ({params}: Props) => {
+// const page = ({params}: Props) => {
 
-  return (
-    <main>
-        <BDTourDetails params={params}/>
+//   return (
+//     <main>
+//         <BDTourDetails params={params}/>
 
-    </main>
-  )
-}
+//     </main>
+//   )
+// }
 
-export default page
+// export default page

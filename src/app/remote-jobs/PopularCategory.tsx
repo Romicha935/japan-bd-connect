@@ -2,7 +2,7 @@
 import Aos from "aos";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { FaLaptopCode, FaPaintBrush, FaChartLine, FaLanguage, FaUserShield, FaCode, FaBullhorn, FaLock } from "react-icons/fa";
+import { FaPaintBrush,  FaLanguage,  FaCode, FaBullhorn, FaLock } from "react-icons/fa";
 
 const jobCategories = [
   {

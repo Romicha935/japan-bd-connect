@@ -8,7 +8,7 @@ import ScholarshipInJapan from './ScolershipInJp'
 import EduCategory from './educategory/EduCategory'
 import TestimonialsSlider from './TestimonialsSlider'
 import FAQ from './FAQ'
-import Gallery from './Gallery'
+
 import PrivateRoute from '../route/PrivateRoute'
 
 const page = () => {

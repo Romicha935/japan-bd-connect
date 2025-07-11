@@ -34,7 +34,7 @@ const Flag = () => {
               <h2 className='text-2xl text-red-600 font-bold mb-2'>JP Japan</h2>
               <p className='text-gray-700 text-justify mb-2'>The national flag of Japan is known as the <strong>Nisshōki</strong> or <strong>Hinomaru</strong>, meaning “circle of the sun.” It symbolizes the rising sun and is a strong representation of Japanese heritage.</p>
               <p className='font-medium mb-1'>🎵 National Anthem: <em>Kimigayo</em></p>
-          <p className='text-sm text-gray-600'>One of the world's oldest and shortest national anthems, expressing the longevity of the emperor's reign.</p>
+          <p className='text-sm text-gray-600'>One of the worlds oldest and shortest national anthems, expressing the longevity of the emperors reign.</p>
         
 
            </div>

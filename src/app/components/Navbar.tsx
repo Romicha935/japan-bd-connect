@@ -1,6 +1,6 @@
  'use client'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import logo from '../../../public/gallery/logo.png'
 import Image from 'next/image'
 import { useContext, useState } from 'react'
@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'
 
 export const Navbar = () => {
     const {user,logOut} = useContext(AuthContext)
-    const router = useRouter()
+    // const router = useRouter()
     const pathname = usePathname()
     const [menuOpen,setMenuOpen] = useState(false)
 
