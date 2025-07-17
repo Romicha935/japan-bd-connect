@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useEffect, useState, ReactNode } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -11,20 +11,20 @@ import {
   GoogleAuthProvider,
   User,
   UserCredential,
-} from 'firebase/auth';
-import app from '../firebase/firebase.config';
+} from "firebase/auth";
+import app from "../firebase/firebase.config";
 
-// 🔶 AuthContext টাইপ define
-interface AuthContextType {
+// ✅ এখানেই টাইপ define করা
+export type AuthContextType = {
   user: User | null;
   isLoading: boolean;
   createUser: (email: string, password: string) => Promise<UserCredential>;
   signIn: (email: string, password: string) => Promise<UserCredential>;
   googleSignIn: () => Promise<UserCredential>;
   logOut: () => Promise<void>;
-}
+};
 
-// 🔶 Context create
+// ✅ context create
 export const AuthContext = createContext<AuthContextType | null>(null);
 
 const auth = getAuth(app);
@@ -40,13 +40,13 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  // 🔹 email/password login
+  // 🔹 login with email/password
   const signIn = (email: string, password: string): Promise<UserCredential> => {
     setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // 🔹 google login
+  // 🔹 Google sign-in
   const googleSignIn = (): Promise<UserCredential> => {
     setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
@@ -58,7 +58,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     return signOut(auth);
   };
 
-  // 🔹 onAuthStateChanged
+  // 🔹 Firebase user observe
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
       setUser(loggedUser);

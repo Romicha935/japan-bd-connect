@@ -3,9 +3,9 @@
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import banner1 from '../../../public/hero1.jpg'
-import banner2 from '../../../public/hero2.jpg'
-import banner3 from '../../../public/technology.png'
+import banner1 from '../../public/hero1.jpg'
+import banner2 from '../../public/hero2.jpg'
+import banner3 from '../../public/technology.png'
 import Slider from 'react-slick';
 import Image from 'next/image';
 

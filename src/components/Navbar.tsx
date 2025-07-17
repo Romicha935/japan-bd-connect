@@ -1,7 +1,7 @@
  'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import logo from '../../../public/gallery/logo.png'
+import logo from '../../public/gallery/logo.png'
 import Image from 'next/image'
 import { useContext, useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'

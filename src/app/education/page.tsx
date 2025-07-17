@@ -9,11 +9,11 @@ import EduCategory from './educategory/EduCategory'
 import TestimonialsSlider from './TestimonialsSlider'
 import FAQ from './FAQ'
 
-import PrivateRoute from '../route/PrivateRoute'
+
 
 const page = () => {
   return (
-  <PrivateRoute>
+
       <main>
         <Banner/>
         <EducationOverview/>
@@ -25,7 +25,7 @@ const page = () => {
         <FAQ/>
      
     </main>
-  </PrivateRoute>
+  
   )
 }
 

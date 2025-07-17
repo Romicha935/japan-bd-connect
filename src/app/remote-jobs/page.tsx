@@ -4,11 +4,11 @@ import WhyremoteJobs from './WhyremoteJobs'
 import PopularCategory from './PopularCategory'
 import SuccessStories from './SuccessStories'
 
-import PrivateRoute from '../route/PrivateRoute'
+
 
 const page = () => {
   return (
-   <PrivateRoute>
+  
      <main>
         <Banner/>
         <WhyremoteJobs/>
@@ -16,7 +16,7 @@ const page = () => {
         <SuccessStories/>
         {/* <HelpfulResources/> */}
     </main>
-   </PrivateRoute>
+
   )
 }
 

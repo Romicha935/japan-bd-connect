@@ -1,5 +1,6 @@
-"use client";
 
+"use client";
+export const dynamic = 'force-dynamic';
 import React, { useContext } from "react";
 import { AuthContext } from "@/context/AuthProvider";
 import { useRouter } from "next/navigation";
@@ -46,7 +47,7 @@ const Register = () => {
     auth
       ?.createUser(email, password)
       .then(() => {
-        Swal.fire({
+        Swal.fire({ 
           icon: "success",
           title: "Registration Successful",
           showConfirmButton: false,
