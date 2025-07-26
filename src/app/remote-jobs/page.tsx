@@ -14,7 +14,7 @@ const page = () => {
         <WhyremoteJobs/>
         <PopularCategory/>
         <SuccessStories/>
-        {/* <HelpfulResources/> */}
+     
     </main>
 
   )
