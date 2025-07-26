@@ -5,7 +5,7 @@ import StudyInJapan from './StudyInJapan'
 import JapanessLearning from './JapanessLearning'
 import ScholarshipInJapan from './ScolershipInJp'
 
-import EduCategory from './educategory/EduCategory'
+import EduCategory from '../../educategories/EduCategory'
 import TestimonialsSlider from './TestimonialsSlider'
 import FAQ from './FAQ'
 

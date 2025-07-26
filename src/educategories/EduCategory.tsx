@@ -4,9 +4,9 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import sudent from '../../../../public/student-life.jpeg'
-import admision from '../../../../public/admisionProccess.jpg'
-import visa from '../../../../public/Visa-Immigration-Guide.jpg'
+import sudent from '../../public/student-life.jpeg'
+import admision from '../../public/admisionProccess.jpg'
+import visa from '../../public/Visa-Immigration-Guide.jpg'
 import Aos from 'aos';
 
 const cards = [
