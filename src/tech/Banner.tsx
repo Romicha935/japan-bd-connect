@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-import banner from '../../../public/technologyr.jpeg'
+import banner from '../../public/technologyr.jpeg'
 
 const Banner = () => {
   return (

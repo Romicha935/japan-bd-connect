@@ -13,7 +13,7 @@ const Fesivals = () => {
         })
     },[])
   return (
-    <section className='py-16 px-6 bg-white'>
+    <section className='py-16 px-6 bg-white pt-10'>
                     <h2 className='text-3xl font-bold text-center text-blue-600 mb-10' data-aos='fade-up'>Traditional Dress of Japan & Bangladesh</h2>
                    
                        

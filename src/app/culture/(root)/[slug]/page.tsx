@@ -8,7 +8,7 @@ interface Props {
   params: { slug: string };
 }
 
-// এই ফাংশন static paths তৈরির জন্য জরুরি
+
 export function generateStaticParams() {
   return bdPlaces.map(place => ({
     slug: place.slug,
