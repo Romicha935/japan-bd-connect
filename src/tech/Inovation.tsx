@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect } from 'react'
-import metroImg from '../../../public/japanmetro.jpg'
-import medicalImg from '../../../public/Japanmedical.jpg'
-import agroImg from '../../../public/japanargutech.jpeg'
+import metroImg from '../../public/japanmetro.jpg'
+import medicalImg from '../../public/Japanmedical.jpg'
+import agroImg from '../../public/japanargutech.jpeg'
 import Image from 'next/image'
 import Aos from 'aos'
 

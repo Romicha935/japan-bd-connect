@@ -16,7 +16,7 @@ const Religion = () => {
     )
     },[])
   return (
-    <section className='py-16 px-5 max-w-7xl mx-auto'>
+    <section className='py-16 pt-10 px-5 max-w-7xl mx-auto'>
      <h1 className='text-3xl font-bold text-purple-700 text-center mb-10' data-aos='fade-up'>Religions in Japan & Bnagladesh</h1>
 
      <div className='flex flex-col-reverse md:flex-row gap-0 items-center'>
