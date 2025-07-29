@@ -1,5 +1,5 @@
 import React from 'react'
-import Flag from '../Flag'
+import Flag from '../../app/culture/Flag'
 
 const page = () => {
   return (

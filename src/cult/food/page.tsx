@@ -1,5 +1,5 @@
 import React from 'react'
-import Food from '../Food'
+import Food from '../../app/culture/Food'
 
 const page = () => {
   return (
