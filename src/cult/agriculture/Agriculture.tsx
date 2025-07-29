@@ -16,7 +16,7 @@ const Agriculture = () => {
    },[])
   return (
      <section className='py-16 px-6 bg-white'>
-            <h2 className='text-3xl font-bold text-center text-blue-600 mb-10' data-aos='fade-up'>Agriculture in Japan & Bangladesh</h2>
+            <h2 className='text-3xl font-bold text-center text-blue-600 mb-10 pt-10' data-aos='fade-up'>Agriculture in Japan & Bangladesh</h2>
            
                
             {/* japan */}
