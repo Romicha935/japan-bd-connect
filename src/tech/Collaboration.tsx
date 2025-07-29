@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 
-import collaborationImg from '../../../public/collabration.jpg'
+import collaborationImg from '../../public/collabration.jpg'
 import Image from 'next/image'
 
 const Collaboration = () => {
