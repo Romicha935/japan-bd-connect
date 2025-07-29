@@ -2,13 +2,12 @@
   "name": "japan-bangladesh-connect",
   "version": "0.1.0",
   "private": true,
- "scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build ",
-  "start": "next start",
-  "lint": "next lint"
-},
-
+  "scripts": {
+    "dev": "node api.js && next dev --turbopack",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "firebase": "^11.10.0",

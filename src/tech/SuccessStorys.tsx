@@ -1,8 +1,8 @@
 "use client"
 
 import Image from 'next/image'
-import bdStartup from '../../../public/bdstartup.jpg'
-import japanTech from '../../../public/robotik.jpg'
+import bdStartup from '../../public/bdstartup.jpg'
+import japanTech from '../../public/robotik.jpg'
 import { useEffect } from 'react'
 import Aos from 'aos'
 const stories = [
