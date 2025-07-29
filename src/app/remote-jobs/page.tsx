@@ -1,23 +1,23 @@
-import React from 'react'
-import Banner from './Banner'
-import WhyremoteJobs from './WhyremoteJobs'
-import PopularCategory from './PopularCategory'
-import SuccessStories from './SuccessStories'
+// import React from 'react'
+// import Banner from './Banner'
+// import WhyremoteJobs from './WhyremoteJobs'
+// import PopularCategory from './PopularCategory'
+// import SuccessStories from './SuccessStories'
 
 
 
-const page = () => {
-  return (
+// const page = () => {
+//   return (
   
-     <main>
-        <Banner/>
-        <WhyremoteJobs/>
-        <PopularCategory/>
-        <SuccessStories/>
+//      <main>
+//         <Banner/>
+//         <WhyremoteJobs/>
+//         <PopularCategory/>
+//         <SuccessStories/>
      
-    </main>
+//     </main>
 
-  )
-}
+//   )
+// }
 
-export default page
+// export default page
